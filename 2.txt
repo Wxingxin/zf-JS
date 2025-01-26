@@ -1,0 +1,6 @@
+你成功生成了一个新的 ED25519 SSH 密钥，并且密钥的指纹是
+ SHA256:grVrv3hOy4LH7wN+tDvvdZKVUt1Y/ELmMtGtDI84ue4
+
+复制公钥内容
+复制你刚才看到的公钥
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBTdIfLsqSRkSe+vU99mbH0+CLxWH32yONfu75o9pzHz weijiaxing765@gmail.com@example.com
