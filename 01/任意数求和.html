@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //任意数求和
+    //1传递实参的个数不定
+    //2传递的值是否为有效值不定
+    //3把传递的有效数组进行相加求和
+    //arguments：函数内置的实参集合
+      //1.类数组集合，集合中存储着所有后舍函数执行时，传递的实参信息
+      //2.不论是否设置行参，arguments都存在
+      //3不论是否传递实参，arguments都存在
+      //4.arguments.callee：存储的是当前函数本身（一般不用，js严格模式下禁止使用）
+    function sum(){
+      console.log(arguments)
+      let total = null
+      for(let i = 0; i < arguments.length; i++){
+        let item = Number(arguments[i])
+        if(isNaN(item)){
+          continue;
+        }
+        total += item
+      }
+      return total;
+    }
+    let total = sum(10, 20, 30, 40)
+    console.log(total)//100
+    let totao1 = sum(10, 20)
+    console.log(totao1)//30
+    let total2 = sum(10, 20, 'aa')
+    console.log(total2)//30
+    let total3 = sum(10, 'bb')
+    console.log(total3)//10
+  </script>
+</body>
+</html>

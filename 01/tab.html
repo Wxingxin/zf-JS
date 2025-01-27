@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #tabBox{
+      box-sizing: border-box;
+      margin: 20px auto;
+      width: 500px;
+    }
+    #navBox{
+      display: flex;
+    }
+    #navBox li{
+      box-sizing: border-box;
+      margin-right: 10px;
+      padding: 0 10px;
+      line-height: 35px;
+      border: 1px solid red;
+    }
+    #tabBox>div{
+      display: none;
+      box-sizing: border-box;
+      padding: 10px;
+      height: 150px;
+      border: 1px solid lightblue;
+    }
+    #tabBox>div.active{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="tabBox">
+    <ul id="navBox">
+      <ul>编程</ul>
+      <ul>读书</ul>
+      <ul>运动</ul>
+    </ul>
+    <div class="active">code happy and mach</div>
+    <div>reading is happiness</div>
+    <div>sport is very good</div>
+  </div>
+</body>
+</html>

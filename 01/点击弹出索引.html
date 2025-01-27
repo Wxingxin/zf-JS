@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button value="a1">a1</button>
+  <button value="a2">a2</button>
+  <button value="a3">a3</button>
+  <button value="a4">a4</button>
+  <button value="a5">a5</button>
+  <script>
+    var btnList = document.getElementsByTagName('button')
+    for(var i = 0; i < btnList.length; i++){
+      btnList[i].myIndex = i+1;
+      btnList[i].onclick = function(){
+        alert(this.myIndex)
+      }
+    }
+    //create function 
+    // function fn(n, m){
+    //   var res = null;
+    //   res = n + m;
+    //   return res
+    // }
+    // //doing function
+    // var AA = fu(10, 20)
+    // console.log(AA) 
+  </script>
+</body>
+</html>

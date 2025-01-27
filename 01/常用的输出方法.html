@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 10
+    let b = [{
+      id: 1,
+      name: 'gao'
+    },{
+      id: 2,
+      name: 'wei'
+    }
+  ]
+    // console.log/dir/table
+    //.table:把一个多维json数组在控制台按照表格的方式呈现出来
+    // typeof console => Object是一个对象
+    console.dir(console)// 查看
+    console.log(a)
+    console.dir(document.body)
+    console.table(b)
+    //浏览器窗口弹窗alert,confirm, prompt
+    //这三种方式输出的结果都必先经过toString转换为字符串
+    //这三种方式都会阻断js代码执行，当窗口关闭，js才会继续执行
+    console.log({name: 'gao'})
+    alert({name: 'gao'})// 
+    // confirm('you are ok')   选择型弹框
+    //prompt('you are ok,tell me')  在confirm基础上加输入框
+    //document.write（）在页面中写信息,输出的都是字符串
+  </script>
+</body>
+</html>

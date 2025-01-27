@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let ary = [10, 20]
+        // let res = ary.push(30, 'aa', {name: 'tom'})
+        // console.log(res, ary)
+        // ary[5] = 40//+
+        // ary[ary.length - 1] = 50
+        // let arr = [10, 20]
+        // let res = arr.unshift(30, 'aa', {name: 'tom'})
+        // console.log(res, arr)
+        // arr = [100, ...arr]
+        // console.log(arr)//[100, 10, 20, 30, 'aa', {name: 'tom'}]
+
+        // let arr = [10, 20]
+        // let res = arr.shift()
+        // console.log(arr)//[20]
+        // let arr = [10, 20]
+        // let res = arr.pop()
+        // console.log(res. arr)//[10]
+
+        // let arr = [10, 20, 30, 40, 50]
+        // let res = arr.splice(2, 2)
+        // console.log(res, arr)//[30, 40] [10, 20, 50]
+        // let arr1 = [10, 20, 30, 40, 50]
+        // let res1 = arr1.splice(0)
+        // console.log(arr1, res1)//[] [10, 20, 30, 40, 50]
+        // let arr2 = [10, 20, 30, 40, 50]
+        // res2 = arr2.splice(arr2.length - 1)
+        // res3 = arr2.splice(0, 1)
+        // let arr = [10, 20, 30, 40, 50]
+        // let res = arr.splice(2, 1, 'aa', {name: 'tom'})
+        // console.log(res, arr)//[30] [10, 20, 'aa', {name: 'tom'}, 40, 50]
+
+        // let arr = [10, 20, 30, 40, 50]
+        // let res = arr.slice(2, 4)
+        // console.log(res)//[30, 40] [10, 20, 30, 40, 50]
+        // let res1 = arr.slice(1)
+        // console.log(res1)//[20, 30, 40, 50] 
+        // let res2 = arr.slice(0)
+        // console.log(res2)//[10, 20, 30, 40, 50]
+
+        // let arr = [10, 20]
+        // let arr1 = [9, 99, 999]
+        // //数组克隆
+        // let res = arr.concat()
+        // console.log(res)//[10, 20]
+        // let res1 = arr.concat(arr1)
+        // console.log(res1)//[10, 20, 9, 99, 999]
+
+        // let arr = [10, 20]
+        // let res = arr.toString()
+        // console.log(res)//"10,20"
+        // console.log([].toString());// ""
+        // console.log([12].toString());// "12"
+        // let arr = [10, 20, 30]
+        // let res = arr.join('-')
+        // console.log(res)//"10-20-30"
+        // let res1 = arr.join('|')
+        // console.log(res1)//"10|20|30"
+        // let res2 = arr.join('')
+        // console.log(res2)//"102030"
+        // let res3 = arr.join()
+        // console.log(res3)//"10,20,30"
+      // let res = arr.join("+")
+      // console.log(res)//"10+20+30"
+      // console.log(eval(res))//60
+
+    // let arr = [10, 20, 30]
+    // let res = arr.reverse()
+    // console.log(res, arr)//[30, 20, 10] [30, 20, 10]
+
+    // let arr = [3, 6, 1, 8, 10, 2]
+    // let res = arr.sort()
+    // console.log(res, arr)//[1, 10, 2, 3, 6, 8] 
+
+
+
+    // <!-- 
+    //     对数字数组进行降序和升序排序。
+
+    //     @param {number[]} arr - 要排序的输入数字数组。
+    //     @returns {number[]} - 排序后的数组。注意，原数组会被修改。
+
+    //     使用示例：
+    //     let arr = [3, 6, 1, 8, 10, 22, 29, 7];
+    //     let descending = arr.sort((a, b) => b - a);
+    //     let ascending = arr.sort((a, b) => a - b);
+    // -->
+    // let arr = [3, 6, 1, 8, 10, 22, 29, 7]
+    // let res = arr.sort((a, b) => b - a)
+    // let res1 = arr.sort((a, b) => a - b)
+    // console.log(res, res1)
+    let arr = [12, 15, 4, 7, 2, 18, 10]
+    for (let i = 0; i < arr.length; i++) {
+        console.log(`${i}: ${arr[i]}`)
+    }
+    let res = arr.forEach((item, index) => {
+        //数组有多少项，函数就执行多少次
+        //item是当前项，index是当前项的索引
+        console.log(index, item)
+    })
+    
+    </script>
+</body>
+</html>

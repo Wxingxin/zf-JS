@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // console.log('aaa' == NaN) // false
+    // console.log(10 == NaN) // false
+    // console.log(NaN == NaN) // false
+
+    // console.log(isNaN(NaN)) // true
+    // console.log(isNaN(10))//false
+    // console.log(isNaN('aaa'))//true
+
+    // console.log(Number('12.4'))
+    // console.log(Number('12.4px'))
+    // console.log(Number(''))// 0
+    // console.log(Number('    '))//
+
+    // console.log(Number(true))//1
+    // console.log(Number(false))//0
+    // console.log(isNaN(false)) //false
+    // console.log(isNaN(true))//false
+    // console.log('-----------')
+    // console.log(Number(null))//0
+
+    // console.log(Number(undefined))//NaN
+    // // console.log(Number({name: gao}))//NaN
+    // console.log(Number({}))//NaN
+    // //{}.toString()  '[object Object]' => NaN
+    // console.log('------')
+    // console.log(Number([]))// 0
+    // //[].toString()  '' => 0
+    // console.log(Number([12]))//12
+    // //[].toString()  '12' => 12
+    // console.log(Number([1, 3]))//NaN
+    // //[].toString()  '1,3' => NaN  (有特殊符号)
+
+
+    // parseInt/ parseFloat([val], [进制]) 也是转换为数字的方法，对呀字符串来说，
+    // 会从左到右依次解析，直到遇到一个不能解析的字符为止，返回解析到的数字
+    // // console.log(Number('12.4px'))//NaN
+    // console.log(parseFloat(true))//NaN
+    // console.log(Number(true))//1
+    // console.log(parseInt('12.4px'))//12
+    // console.log(parseFloat('12.4px'))//12.4
+    // console.log(first)
+
+
+    // console.log(12.toString())  error
+    // let a = 12
+    // console.log(a.toString())// '12'
+    // console.log(true.toString())// 'true'
+    // console.log(false.toString())// 'false'
+    // console.log(null.toString())//error
+    // console.log(undefined.toString())//error
+    // console.log(({}).toString())// '[object Object]'
+    // console.log(([]).toString())// ''
+    // console.log(([12]).toString())// '12'
+    // console.log(([1, 3]).toString())// '1,3'
+    // console.log(({}).toString())// '[object Object]'
+
+    // //null undefined 不能 直接调用toString ， 
+    // //但是转换为字符串的结果是 'null' 和 'undefined'
+    // // console.log(null.toString())//error
+    // // console.log(undefined.toString())//error
+    // console.log([].toString())// ''
+    // console.log([12].toString())// '12'
+    // console.log([1, 3].toString())// '1,3'
+    // console.log(([]).toString())// ''
+    // console.log(([12]).toString())// '12'
+    // console.log(([1, 3]).toString())// '1,3'
+    // //普通对象没有toString方法，所以会调用Object.prototype.toString方法
+    // console.log(({}).toString())// '[object Object]'
+
+    // console.log('10' + 10) // '1010'
+    // console.log('10' - 10) // 0
+    // console.log('10px' - 10) // NaN
+    // console.log(10 + NaN) // NaN
+    // console.log(10 + [])// '10'
+// 10 0 1 0 
+//11
+// console.log(Boolean(''))//false
+// console.log(Boolean(' '))// true
+
+// console.log(!!1)//true
+// // console.log(!1)//false
+
+// if(1){
+//   console.log('aaa')
+// }
+// if( '3px' + 3){// '3px3' => true
+//   console.log('aaa')
+// }
+// if( 3 - '3px'){// 3 - NaN => NaN => false
+//   console.log('first')
+// }
+
+    // let boyfirnd = {
+    //   name: 'yiyanqianxi',
+    //   age: 40,
+    //   height: 1.88,
+    //   weight: 180,
+    //   1: 100
+    // }
+
+    // boyfirnd.gf = 'wie'
+    // console.log(boyfirnd['gf'])// 'wie'
+    // boyfirnd.age = null
+    // boyfirnd.height = undefined
+    // delete boyfirnd.weight
+
+    // console.log(boyfirnd.name)
+    // console.log(boyfirnd['name'])
+    // console.log(boyfirnd[110])
+    // console.log(boyfirnd[1])
+    // console.log(boyfirnd.1)//error
+
+
+    // let arr = [1, 'e', true, null, undefined, {}, []]
+    // console.log(arr[0])//1
+    // // console.log(arr.1)//error
+    // console.log(arr.length)//6
+    // console.log(arr['length'])//6
+    // console.log(arr[arr.length - 1])//
+    // arr[arr.length] = 'aaa'
+
+    // console.log(typeof null)//object
+    // console.log(typeof NaN)//number
+    // console.log(typeof undefined)//undefined
+    // console.log(typeof Symbol('aaa'))//symbol
+    // console.log('-----')
+    // console.log(typeof function() {})// function
+    // console.log(typeof [])//object
+    // console.log(typeof {})//object
+    // console.log(typeof new Date())//object
+    // console.log(typeof /a/)//object
+    // console.log(typeof typeof [])//string
+
+    // a > 0 ? (let b = 10, console.log(b)) : (let c = 20, console.log(c))
+    // let a = '5'
+    // switch (a) {//default
+    //   case 1: 
+    //     console.log('11')
+    //     break
+    //   case 5:
+    //     console.log('55')
+    //     break
+    //   default:
+    //     console.log('default')
+    // }
+    // if (a == 1) {// 55
+    //   console.log('11')
+    // } else if (a == 5) {
+    //   console.log('55')
+    // } else {
+    //   console.log('default')
+    // }
+    // var i ;
+    // for( i = 0; i < 5; i++) {
+    //   console.log(i)
+    // }
+    // console.log(i)
+
+//     for (let i = 0; i < 10; i++){
+//   console.log(i)
+//   break
+// }
+// console.log(i)
+    // var name = 10 //name本身没有意义
+    // var obj = {
+    //   [12]: 100,
+    //   // [12, 13]: 100 ---- error
+    //   null: 12,
+    //   undefined: 13,
+    //   //属性名：属性值【放的是变量也是把变量存储的值拿过来作为属性值】
+    //   name: name,//es6简化写法 和 name：name 一模一样
+    //   age: 2===2 ? 100 : 200
+    // }
+    // console.log(obj.name)
+    // //'age'  值 -》代表本身
+    // //age    变量-》代表它存储的这个值
+    // //obj[name]--name代表数组10---obj[10]---没有这个属性所以obj[10] --undefined
+
+
+
+    // for in 循环；用来循环遍历对象中的键值对（continue和breake同样适用）
+    // var obj = {
+    //   name:'gao',
+    //   age: 22,
+    //   friends: 'wei',
+    //   3: 33,
+    //   1: 20,
+    //   2: 120 
+    // }
+    // //for（var 变量（key） in 对象）
+    // //对象中有多少组键值对，循环几次（除非break结束）
+    // for(var key in obj){
+    //   //每一次循环key变量存储的值：当前对象的属性名
+    //   //获取属性值：obj[属性名] =》 obj[key] key为变量
+    //   //obj['key']/obj.key  属性名为key，我想获得key的属性值
+    //   console.log(key)
+    //   console.log('属性名'+key +'属性值'+obj[key])
+    // }
+    // //for in 在遍历的时候，优先遍历数组属性名（从小到大）
+   </script>
+</body>
+</html>

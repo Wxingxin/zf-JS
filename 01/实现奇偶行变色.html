@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+    }
+    #newsBox{
+      box-sizing: border-box;
+      margin: 20px auto;
+      padding: 20px;
+      width: 300px;
+      border: 2px solid lightblue;
+    }
+    #newsBox li{
+      line-height: 50px;
+      border-bottom: 1px solid lightcoral;
+
+    }
+    #newsBox li:nth-last-child(1){
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <ul id="newsBox">
+  <li>this is 1 li</li>
+  <li>this is 2 li</li>
+  <li>this is 3 li</li>
+  <li>this is 4 li</li>
+  <li>this is 5 li</li>
+  </ul>
+  
+  <script>
+    //[context].getElementsByTagName('tagname'):
+    // 获取context下所有tagname标签(元素集合 HTMLCollection)
+    //=》集合和数组类似，也是以数字索引作为属性名，有length属性长度，
+    // 但是不能使用数组的方法，属于类数组
+    let newsBox = document.getElementById('newsBox');
+    let newsList = newsBox.getElementsByTagName('li')
+    console.dir(newsList)
+    for(let i = 0; i < newsList.length; i++){
+      let curLi = newsList[i];
+      if(i % 2 === 0){
+        curLi.style.backgroundColor = 'lightblue'
+      }else{
+        curLi.style.backgroundColor = 'lightcoral'
+      }
+      curLi.onmouseover = function(){
+        this.style.backgroundColor = 'lightgreen'
+      }
+      curLi.onmouseout = function(){
+        this.style.backgroundColor = '';
+      }
+    }
+  </script>
+</body>
+</html>
